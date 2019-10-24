@@ -55,20 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="TCP/IP概述 链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。  网络层：处理分组在网络中的活动，例如分组选路。  运输层：为两台主机上的应用程序提供端到端的通讯。  应用层：处理特定的应用程序细节。">
+  <meta name="description" content="Java当中的锁锁—-sync—上锁就是改变对象的对象头什么叫对象头——Java对象的布局——Java对象由什么组成——对象在堆上面到底要分配多大内存64bit的Java虚拟机​                                Java的对象布局1.（属性）—–Java对象的实例数据—-不固定">
 <meta property="og:type" content="article">
-<meta property="og:title" content="古月的博客">
-<meta property="og:url" content="http://yoursite.com/2019/10/20/TCP/index.html">
+<meta property="og:title" content="synchronized">
+<meta property="og:url" content="http://yoursite.com/2019/10/24/Synchronied/index.html">
 <meta property="og:site_name" content="古月的博客">
-<meta property="og:description" content="TCP/IP概述 链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。  网络层：处理分组在网络中的活动，例如分组选路。  运输层：为两台主机上的应用程序提供端到端的通讯。  应用层：处理特定的应用程序细节。">
+<meta property="og:description" content="Java当中的锁锁—-sync—上锁就是改变对象的对象头什么叫对象头——Java对象的布局——Java对象由什么组成——对象在堆上面到底要分配多大内存64bit的Java虚拟机​                                Java的对象布局1.（属性）—–Java对象的实例数据—-不固定">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="e:%5Chexo%5Csource%5Cimages%5CFTP.png">
-<meta property="og:updated_time" content="2019-10-20T11:27:59.323Z">
+<meta property="og:updated_time" content="2019-10-24T14:47:04.078Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="古月的博客">
-<meta name="twitter:description" content="TCP/IP概述 链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。  网络层：处理分组在网络中的活动，例如分组选路。  运输层：为两台主机上的应用程序提供端到端的通讯。  应用层：处理特定的应用程序细节。">
-<meta name="twitter:image" content="e:%5Chexo%5Csource%5Cimages%5CFTP.png">
-  <link rel="canonical" href="http://yoursite.com/2019/10/20/TCP/">
+<meta name="twitter:title" content="synchronized">
+<meta name="twitter:description" content="Java当中的锁锁—-sync—上锁就是改变对象的对象头什么叫对象头——Java对象的布局——Java对象由什么组成——对象在堆上面到底要分配多大内存64bit的Java虚拟机​                                Java的对象布局1.（属性）—–Java对象的实例数据—-不固定">
+  <link rel="canonical" href="http://yoursite.com/2019/10/24/Synchronied/">
 
 
 <script id="page-configurations">
@@ -82,7 +80,7 @@
   };
 </script>
 
-  <title> | 古月的博客</title>
+  <title>synchronized | 古月的博客</title>
   
 
 
@@ -213,7 +211,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/20/TCP/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/24/Synchronied/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="古月">
@@ -227,7 +225,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            
+            synchronized
             
 
           
@@ -244,7 +242,7 @@
                 
               
 
-              <time title="创建时间：2019-10-20 11:22:10 / 修改时间：19:27:59" itemprop="dateCreated datePublished" datetime="2019-10-20T11:22:10+08:00">2019-10-20</time>
+              <time title="创建时间：2019-10-24 19:45:11 / 修改时间：22:47:04" itemprop="dateCreated datePublished" datetime="2019-10-24T19:45:11+08:00">2019-10-24</time>
             </span>
           
             
@@ -263,17 +261,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
-<li><p>链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。</p>
-</li>
-<li><p>网络层：处理分组在网络中的活动，例如分组选路。</p>
-</li>
-<li><p>运输层：为两台主机上的应用程序提供端到端的通讯。</p>
-</li>
-<li><p>应用层：处理特定的应用程序细节。</p>
-</li>
-</ul>
-<p><img src="E:%5Chexo%5Csource%5Cimages%5CFTP.png" alt></p>
+        <p>Java当中的锁</p><p>锁—-sync—上锁就是改变对象的对象头</p><p>什么叫对象头——Java对象的布局——Java对象由什么组成——对象在堆上面到底要分配多大内存</p><p>64bit的Java虚拟机</p><p>​                                </p><p>Java的对象布局</p><p>1.（属性）—–Java对象的实例数据—-不固定</p><a id="more"></a>
+
+
+
+
+
+
+<p>2.对象头—-固定的</p>
+<p>3.数据对齐（对象内存大小要求8的整数倍）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> OFFSET  SIZE   TYPE DESCRIPTION                               VALUE</span><br><span class="line">      0     4        (object header)                           09 00 00 00 (00001001 00000000 00000000 00000000) (9)</span><br><span class="line">      4     4        (object header)                           88 25 a3 14 (10001000 00100101 10100011 00010100) (346236296)</span><br><span class="line">      8     4    int T.flag                                    0</span><br><span class="line">     12     4        (loss due to the next object alignment)</span><br><span class="line">Instance size: 16 bytes</span><br><span class="line">Space losses: 0 bytes internal + 4 bytes external = 4 bytes total</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>Java的对象头———对象的第一个部分———–公共结构</p>
+<p>MarkWord—–64bit——-不固定</p>
+<p>​        对象状态</p>
+<p>​                        1.无状态 new  unused:25 | identity_hashcode:31 | unused:1 |age:4 |biased_lock:1 | lock:2  </p>
+<p>​                                        hashcode（计算）不存在</p>
+<p>​                        2.偏向锁          thread:54   |    epoch:2    |    uused:1    |    age:4     |biased_lock:1   | lock:2</p>
+<p>​                        3.轻量锁         ptr_to_lock_record:62        |        lock:2</p>
+<p>​                        4.重量锁         ptr_to_heavyweight_monitor:62  |     lock:2</p>
+<p>​                        5.gc标记                                                                     |   lock:2</p>
+<p>Klass pointer———-32bit(指针压缩)</p>
+<p>对象头信息：堆对象的布局，类型，GC状态，同步状态，标识哈希码</p>
+<p>JVM——————规范/标准</p>
+<p>HotSpot————产品/实现——-sun公司</p>
+<p>openjdk————项目———–代码/C++</p>
 
     </div>
 
@@ -290,8 +303,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/08/文章/" rel="next" title="文章">
-                  <i class="fa fa-chevron-left"></i> 文章
+                <a href="/2019/10/20/TCP-IP/" rel="next" title="TCP/IP">
+                  <i class="fa fa-chevron-left"></i> TCP/IP
                 </a>
               
             </div>
@@ -344,8 +357,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP-IP"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li></ol></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
