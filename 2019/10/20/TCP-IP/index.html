@@ -63,7 +63,12 @@
 <meta property="og:description" content="TCP/IP概述链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。网络层：处理分组在网络中的活动，例如分组选路。运输层：为两台主机上的应用程序提供端到端的通讯。应用层：处理特定的应用程序细节。通过路由器连接的两个网络 端系统（end system）  中间系统（intermediate system）  应用层和运输层使用端到端（end-to-end)协议  网络层提供的是逐跳（hop-to">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/.com//packageformat.png">
-<meta property="og:updated_time" content="2019-10-29T14:18:54.964Z">
+<meta property="og:image" content="http://yoursite.com/.com//IP.png">
+<meta property="og:image" content="http://yoursite.com/.com//ServiceType.png">
+<meta property="og:image" content="http://yoursite.com/.com//t1.png">
+<meta property="og:image" content="http://yoursite.com/.com//t2.png">
+<meta property="og:image" content="http://yoursite.com/.com//SpecialIP.png">
+<meta property="og:updated_time" content="2019-10-30T14:40:12.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TCP&#x2F;IP">
 <meta name="twitter:description" content="TCP/IP概述链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。网络层：处理分组在网络中的活动，例如分组选路。运输层：为两台主机上的应用程序提供端到端的通讯。应用层：处理特定的应用程序细节。通过路由器连接的两个网络 端系统（end system）  中间系统（intermediate system）  应用层和运输层使用端到端（end-to-end)协议  网络层提供的是逐跳（hop-to">
@@ -255,7 +260,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-29 22:18:54" itemprop="dateModified" datetime="2019-10-29T22:18:54+08:00">2019-10-29</time>
+                <time title="修改时间：2019-10-30 22:40:12" itemprop="dateModified" datetime="2019-10-30T22:40:12+08:00">2019-10-30</time>
               </span>
             
           
@@ -344,6 +349,47 @@
 <p>两台通信主机路径中的最小MTU，它被称作路径MTU</p>
 <p>路径MTU在两个方向上不一定是一致的</p>
 <p>MTU是计算出方向</p>
+<h3 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h3><h6 id="IP介绍"><a href="#IP介绍" class="headerlink" title="IP介绍"></a>IP介绍</h6><p>IP是TCP/IP协议族中最为核心的协议。所有的TCP，UDP，ICMP及IGMP数据都以IP数据报的格式传输</p>
+<p>IP提供不可靠，无连接的数据报传送服务</p>
+<p>不可靠（unreliable）的意思是它不能保证 I P数据报能成功地到达目的地。 I P仅提供最好 的传输服务。如果发生某种错误时，如某个路由器暂时用完了缓冲区， I P有一个简单的错误 处理算法：丢弃该数据报，然后发送 I C M P消息报给信源端。任何要求的可靠性必须由上层来 提供（如T C P）。 </p>
+<p>无连接（c o n n e c t i o n l e s s）这个术语的意思是I P并不维护任何关于后续数据报的状态信息。 每个数据报的处理是相互独立的。这也说明， I P数据报可以不按发送顺序接收。如果一信源 向相同的信宿发送两个连续的数据报（先是 A，然后是B），每个数据报都是独立地进行路由 选择，可能选择不同的路线，因此 B可能在A到达之前先到达。</p>
+<p>ipconfig/ifconfig</p>
+<p>netstat</p>
+<h6 id="IP首部"><a href="#IP首部" class="headerlink" title="IP首部"></a>IP首部</h6><p><img src="/.com//IP.png" alt></p>
+<p>IP头部最大60字节</p>
+<p>4个字节的32 bit值以下面的次序传输：首先是 0～7 bit，其次8～15 bit，然后1 6～23 bit， 最后是24~31 bit。这种传输次序称作big endian字节序。由于T C P / I P首部中所有的二进制整数 在网络中传输时都要求以这种次序，因此它又称作网络字节序</p>
+<p>目前的版本号是4，因此IP有时也称作IPv4</p>
+<p>首部长度指的是首部占32bit字的数目，包括任何选项。由于是一个4比特字段，能表示的二进制最大数为1111，换算成十进制为15，即首部最长为15个32bit长度（4字节），因此首部最长为60个字节。</p>
+<p>服务类型TOS字段包括一个3bit 的优先权子字段（现已被忽略），4bit的TOS子字段和1bit未用位但必须置0.</p>
+<p>4 bit 的TOS分别代表：最小延时，最大吞吐量，最高可靠性和最小费用， 只能置其中1bit ,如果4bit均为0，则是一般服务</p>
+<p><img src="/.com//ServiceType.png" alt></p>
+<p>总长度字段是指整个IP数据报的长度，以字节为单位。利用首部长度字段和总长度字段，就可以知道IP数据报中的数据字段的起始位置和长度，由于该字段长16比特，所以IP数据报最长为65535字节，当数据报被分片时，该字段的值也随着变化。</p>
+<p>16位标识字段唯一地标识主机发送的每一份数据报。通常每发送一份报文它的值就会加 1。</p>
+<p>3位标志，第1位作为保留，置0；第2位（df），分片，置0表示可以分片，置1表示不能分片；第3位(mf)，更多分片，置0表示最后一个分片，置1表示不是最后一个分片，还有。</p>
+<p>13位偏移量：各个IP分片数据报在发送到目的主机时可能是无序的，所以就需要“偏移量”字段来指明“该分片在原数据报中的位置顺序”</p>
+<p>8位生存时间（TTL）是数据报可以经过的最多路由器数，指定数据报的生存时间，每经过一个路由器就减一，为0就丢弃，（255—0）（可以防止环路）</p>
+<p>8位协议：8位1个字节，包含一个数字，该数字对应一个“有效载荷部分的数据类型”。比如0x06代表TCP（ICMP是1，UDP 是17）。表示下一个头部是什么</p>
+<p>16位首部校验和：首先将“首部校验和”设置为0。然后对首部（整个首部是一个16位字的“序列”）计算16位二进制反码和。该值被存储在首部校验和字段中。当接收方接收到数据报后，也对其首部进行校验计算，如果结果与“首部校验和”的值不同，就丢弃收到的数据报</p>
+<h6 id="IP首部选项"><a href="#IP首部选项" class="headerlink" title="IP首部选项"></a>IP首部选项</h6><p>任选项，是数据报中的一个可变长的可选信息。目前，这些任选项定义 如下： </p>
+<p>• 安全和处理限制（用于军事领域，详细内容参见 RFC 1108[Kent 1991]） </p>
+<p>• 记录路径（让每个路由器都记下它的 I P地址，见7 . 3节）</p>
+<p>• 时间戳（让每个路由器都记下它的 I P地址和时间，见7 . 4节） </p>
+<p>• 宽松的源站选路（为数据报指定一系列必须经过的 I P地址，见8 . 5节） </p>
+<p>• 严格的源站选路（与宽松的源站选路类似，但是要求只能经过指定的这些地址，不能 经过其他的地址）。 </p>
+<p>这些选项很少被使用，并非所有的主机和路由器都支持这些选项。 选项字段一直都是以 32 bit作为界限，在必要的时候插入值为 0的填充字节。这样就保证 I P首部始终是32 bit的整数倍（这是首部长度字段所要求的）。</p>
+<h6 id="IP路由的选择"><a href="#IP路由的选择" class="headerlink" title="IP路由的选择"></a>IP路由的选择</h6><p><img src="/.com//t1.png" alt></p>
+<p><img src="/.com//t2.png" alt></p>
+<p> 1)该例子中的所有主机和路由器都使用了默认路由。事实上，大多数主机和一些路由器 可以用默认路由来处理任何目的，除非它在本地局域网上。</p>
+<p> 2) 数据报中的目的I P地址始终不发生任何变化（在 8 . 5节中，我们将看到，只有使用源路 由选项时，目的I P地址才有可能被修改，但这种情况很少出现）。所有的路由选择决策都是基 于这个目的I P地址。 </p>
+<p>3) 每个链路层可能具有不同的数据帧首部，而且链路层的目的地址（如果有的话）始终 指的是下一站的链路层地址。在例子中，两个以太网封装了含有下一站以太网地址的链路层 首部，但是S L I P链路没有这样做。以太网地址一般通过 A R P获得。 </p>
+<h6 id="特殊情况的IP地址"><a href="#特殊情况的IP地址" class="headerlink" title="特殊情况的IP地址"></a>特殊情况的IP地址</h6><p><img src="/.com//SpecialIP.png" alt></p>
+<p>0表示所 有的比特位全为0；- 1表示所有的比特位全为1；n e t i d、s u b n e t i d和h o s t i d分别表示不为全0或全 1的对应字段。子网号栏为空表示该地址没有进行子网划分</p>
+<p>表的头两项是特殊的源地址，中间项是特殊的环回地址， 最后四项是广播地址。 表中的头两项，网络号为0，如主机使用B O O T P协议确定本机I P地址时只能作为初始化过 程中的源地址出现。</p>
+<h6 id="IP的未来"><a href="#IP的未来" class="headerlink" title="IP的未来"></a>IP的未来</h6><p>I P主要存在三个方面的问题。这是 I n t e r n e t在过去几年快速增长所造成的结果（参见习题 1 . 2）。</p>
+<p> 1) 超过半数的B类地址已被分配。根据估计，它们大约在 1 9 9 5年耗尽。 </p>
+<p>2) 32 bit的I P地址从长期的I n t e r n e t增长角度来看，一般是不够用的。 </p>
+<p>3) 当前的路由结构没有层次结构，属于平面型 ( f l a t )结构，每个网络都需要一个路由表目。 随着网络数目的增长，一个具有多个网络的网站就必须分配多个 C类地址，而不是一个B类地 址，因此路由表的规模会不断增长。</p>
+<p> 无类别的域间路由选择C I D R（Classless Interdomain Routing）提出了一个可以解决第三 个问题的建议，对当前版本的 I P（I P版本4）进行扩充，以适应2 1世纪I n t e r n e t的发展</p>
 
     </div>
 
@@ -418,7 +464,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP-IP"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.0.1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#通过路由器连接的两个网络"><span class="nav-number">1.0.1.0.0.1.</span> <span class="nav-text">通过路由器连接的两个网络</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#TCP-IP协议族中不同层次的协议"><span class="nav-number">1.0.1.0.0.2.</span> <span class="nav-text">TCP/IP协议族中不同层次的协议</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#封装——–分用"><span class="nav-number">1.0.1.0.0.3.</span> <span class="nav-text">封装——–分用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#端口号"><span class="nav-number">1.0.1.0.0.4.</span> <span class="nav-text">端口号</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链路层"><span class="nav-number">1.0.2.</span> <span class="nav-text">链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#封装格式（以太网和IEE-802封装）"><span class="nav-number">1.0.2.0.0.1.</span> <span class="nav-text">封装格式（以太网和IEE 802封装）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#环回接口"><span class="nav-number">1.0.2.0.0.2.</span> <span class="nav-text">环回接口</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MTU和路径MTU"><span class="nav-number">1.0.2.0.0.3.</span> <span class="nav-text">MTU和路径MTU</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP-IP"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.0.1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#通过路由器连接的两个网络"><span class="nav-number">1.0.1.0.0.1.</span> <span class="nav-text">通过路由器连接的两个网络</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#TCP-IP协议族中不同层次的协议"><span class="nav-number">1.0.1.0.0.2.</span> <span class="nav-text">TCP/IP协议族中不同层次的协议</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#封装——–分用"><span class="nav-number">1.0.1.0.0.3.</span> <span class="nav-text">封装——–分用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#端口号"><span class="nav-number">1.0.1.0.0.4.</span> <span class="nav-text">端口号</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链路层"><span class="nav-number">1.0.2.</span> <span class="nav-text">链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#封装格式（以太网和IEE-802封装）"><span class="nav-number">1.0.2.0.0.1.</span> <span class="nav-text">封装格式（以太网和IEE 802封装）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#环回接口"><span class="nav-number">1.0.2.0.0.2.</span> <span class="nav-text">环回接口</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MTU和路径MTU"><span class="nav-number">1.0.2.0.0.3.</span> <span class="nav-text">MTU和路径MTU</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP"><span class="nav-number">1.0.3.</span> <span class="nav-text">IP</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#IP介绍"><span class="nav-number">1.0.3.0.0.1.</span> <span class="nav-text">IP介绍</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP首部"><span class="nav-number">1.0.3.0.0.2.</span> <span class="nav-text">IP首部</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP首部选项"><span class="nav-number">1.0.3.0.0.3.</span> <span class="nav-text">IP首部选项</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP路由的选择"><span class="nav-number">1.0.3.0.0.4.</span> <span class="nav-text">IP路由的选择</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#特殊情况的IP地址"><span class="nav-number">1.0.3.0.0.5.</span> <span class="nav-text">特殊情况的IP地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP的未来"><span class="nav-number">1.0.3.0.0.6.</span> <span class="nav-text">IP的未来</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
