@@ -62,17 +62,30 @@
 <meta property="og:site_name" content="古月的博客">
 <meta property="og:description" content="TCP/IP概述链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。网络层：处理分组在网络中的活动，例如分组选路。运输层：为两台主机上的应用程序提供端到端的通讯。应用层：处理特定的应用程序细节。通过路由器连接的两个网络 端系统（end system）  中间系统（intermediate system）  应用层和运输层使用端到端（end-to-end)协议  网络层提供的是逐跳（hop-to">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/.com//E:%5Chexo%5Csource%5Cimages%5Cnetwork%5Cpackageformat.png">
 <meta property="og:image" content="http://yoursite.com/.com//packageformat.png">
 <meta property="og:image" content="http://yoursite.com/.com//IP.png">
 <meta property="og:image" content="http://yoursite.com/.com//ServiceType.png">
 <meta property="og:image" content="http://yoursite.com/.com//t1.png">
 <meta property="og:image" content="http://yoursite.com/.com//t2.png">
 <meta property="og:image" content="http://yoursite.com/.com//SpecialIP.png">
-<meta property="og:updated_time" content="2019-10-30T14:40:12.473Z">
+<meta property="og:image" content="http://yoursite.com/.com//arp01.png">
+<meta property="og:image" content="http://yoursite.com/.com//arp02.png">
+<meta property="og:image" content="http://yoursite.com/.com//ICMP01.png">
+<meta property="og:image" content="http://yoursite.com/.com//ICMP02.png">
+<meta property="og:image" content="http://yoursite.com/.com//ICMP03.png">
+<meta property="og:image" content="http://yoursite.com/.com//ICMP04.png">
+<meta property="og:image" content="http://yoursite.com/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CICMP05.png">
+<meta property="og:image" content="http://yoursite.com/.com//hexo/source/_posts/TCP-IP/ICMP06.png">
+<meta property="og:image" content="http://yoursite.com/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CPing01.png">
+<meta property="og:image" content="http://yoursite.com/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CPing02.png">
+<meta property="og:image" content="http://yoursite.com/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CPing03.png">
+<meta property="og:image" content="http://yoursite.com/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CTraceroute01.png">
+<meta property="og:updated_time" content="2019-11-05T13:32:42.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TCP&#x2F;IP">
 <meta name="twitter:description" content="TCP/IP概述链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。网络层：处理分组在网络中的活动，例如分组选路。运输层：为两台主机上的应用程序提供端到端的通讯。应用层：处理特定的应用程序细节。通过路由器连接的两个网络 端系统（end system）  中间系统（intermediate system）  应用层和运输层使用端到端（end-to-end)协议  网络层提供的是逐跳（hop-to">
-<meta name="twitter:image" content="http://yoursite.com/.com//packageformat.png">
+<meta name="twitter:image" content="http://yoursite.com/.com//E:%5Chexo%5Csource%5Cimages%5Cnetwork%5Cpackageformat.png">
   <link rel="canonical" href="http://yoursite.com/2019/10/20/TCP-IP/">
 
 
@@ -260,7 +273,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-30 22:40:12" itemprop="dateModified" datetime="2019-10-30T22:40:12+08:00">2019-10-30</time>
+                <time title="修改时间：2019-11-05 21:32:42" itemprop="dateModified" datetime="2019-11-05T21:32:42+08:00">2019-11-05</time>
               </span>
             
           
@@ -293,7 +306,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h1><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。</p><p>网络层：处理分组在网络中的活动，例如分组选路。</p><p>运输层：为两台主机上的应用程序提供端到端的通讯。</p><p>应用层：处理特定的应用程序细节。</p><h6 id="通过路由器连接的两个网络"><a href="#通过路由器连接的两个网络" class="headerlink" title="通过路由器连接的两个网络"></a>通过路由器连接的两个网络</h6><ul>
+        <h1 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h1><p><img src="/.com//E:%5Chexo%5Csource%5Cimages%5Cnetwork%5Cpackageformat.png" alt></p><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>链路层：处理与电缆（或其他任何传输媒介）的物理接口细节。</p><p>网络层：处理分组在网络中的活动，例如分组选路。</p><p>运输层：为两台主机上的应用程序提供端到端的通讯。</p><p>应用层：处理特定的应用程序细节。</p><h6 id="通过路由器连接的两个网络"><a href="#通过路由器连接的两个网络" class="headerlink" title="通过路由器连接的两个网络"></a>通过路由器连接的两个网络</h6><ul>
 <li><p>端系统（end system）</p>
 </li>
 <li><p>中间系统（intermediate system）</p>
@@ -309,6 +322,7 @@
 <li><p>互联网的目的之一应用程序中隐藏所有的物理细节</p>
 </li>
 </ul><a id="more"></a>
+
 
 
 
@@ -390,6 +404,169 @@
 <p>2) 32 bit的I P地址从长期的I n t e r n e t增长角度来看，一般是不够用的。 </p>
 <p>3) 当前的路由结构没有层次结构，属于平面型 ( f l a t )结构，每个网络都需要一个路由表目。 随着网络数目的增长，一个具有多个网络的网站就必须分配多个 C类地址，而不是一个B类地 址，因此路由表的规模会不断增长。</p>
 <p> 无类别的域间路由选择C I D R（Classless Interdomain Routing）提出了一个可以解决第三 个问题的建议，对当前版本的 I P（I P版本4）进行扩充，以适应2 1世纪I n t e r n e t的发展</p>
+<h3 id="ARP：地址解析协议"><a href="#ARP：地址解析协议" class="headerlink" title="ARP：地址解析协议"></a>ARP：地址解析协议</h3><h6 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h6><p>当一台主机把以太网数据帧发送到位于同一局域网上的另一台主机时，是根据 48 bit的以 太网地址来确定目的接</p>
+<p>口的。设备驱动程序从不检查 I P数据报中的目的I P地址。 </p>
+<p>地址解析为这两种不同的地址形式提供映射： 32 bit的I P 地址和数据链路层使用的任何类型的地址。 </p>
+<p>A R P为I P地址到对应的硬件地址之间提供动态映射。我们 之所以用动态这个词是因为这个过程是自动完成的，一</p>
+<p>般应用 程序用户或系统管理员不必关心。 </p>
+<p>R A R P是被那些没有磁盘驱动器的系统使用（一般是无盘工作站或 X终端），它需要系统 管理员进行手工设置。</p>
+<h6 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h6><p><img src="/.com//arp01.png" alt></p>
+<p>（1） 应用程序FTP客户端调用函数ge t h o s t b y n a m e (3)把主机名（bsdi）转换成32 bit的IP地址。 这个函数</p>
+<p>在D N S（域名系统）中称作解析器，我们将在第1 4章对它进行介绍。这个转换 过程或者使用DNS，或者在较小</p>
+<p>网络中使用一个静态的主机文件（/et c / h o s t s ）。 </p>
+<p>（2）F T P客户端请求T C P用得到的I P地址建立连接。 </p>
+<p>（3） T C P发送一个连接请求分段到远端的主机，即用上述 I P地址发送一份I P数据报</p>
+<p>（4）如果目的主机在本地网络上（如以太网、令牌环网或点对点链接的另一端），那么I P数 据报可以直接送到目</p>
+<p>的主机上。如果目的主机在一个远程网络上，那么就通过 I P选路 函数来确定位于本地网络上的下一站路由器地</p>
+<p>址，并让它转发 I P数据报。在这两种情 况下，I P数据报都是被送到位于本地网络上的一台主机或路由器。</p>
+<p>（5）假定是一个以太网，那么发送端主机必须把 32 bit的I P地址变换成48 bit的以太网地址。</p>
+<p>从逻辑I n t e r n e t地址到对应的物理硬件地址需要进行翻译。这就是 A R P的功能。 A R P本来是用于广播网络</p>
+<p>的，有许多主机或路由器连在同一个网络上。</p>
+<p>（6）A R P发送一份称作A R P请求的以太网数据帧给以太网上的每个主机。这个过程称作广 播，如图 4 - 2中的虚</p>
+<p>线所示。 A R P请求数据帧中包含目的主机的 I P地址（主机名为 b s d i），其意思是“如果你是这个I P地址的拥有</p>
+<p>者，请回答你的硬件地址。” </p>
+<p>（7）目的主机的A R P层收到这份广播报文后，识别出这是发送端在寻问它的 I P地址，于是 发送一个A R P应答。</p>
+<p>这个A R P应答包含I P地址及对应的硬件地址。</p>
+<p>（8）收到A R P应答后，使A R P进行请求—应答交换的I P数据报现在就可以传送了</p>
+<p> （9）发送I P数据报到目的主机。 </p>
+<p>在A R P背后有一个基本概念，那就是网络接口有一个硬件地址（一个 48 bit的值，标识不 同的以太网或令牌环网</p>
+<p>络接口）。在硬件层次上进行的数据帧交换必须有正确的接口地址。但 是，T C P / I P有自己的地址：32 bit的I P</p>
+<p>地址。知道主机的I P地址并不能让内核发送一帧数据给 主机。内核（如以太网驱动程序）必须知道目的端的硬件</p>
+<p>地址才能发送数据。 A R P的功能是 在32 bit的I P地址和采用不同网络技术的硬件地址之间提供动态映射。 </p>
+<h6 id="ARP高速缓存"><a href="#ARP高速缓存" class="headerlink" title="ARP高速缓存"></a>ARP高速缓存</h6><p>A R P高效运行的关键是由于每个主机上都有一个 A R P高速缓存。这个高速缓存存放了最 近I n t e r n e t地址到硬</p>
+<p>件地址之间的映射记录。高速缓存中每一项的生存时间一般为 2 0分钟，起 始时间从被创建时开始算起。 </p>
+<p>我们可以用ar p (8)命令来检查ARP高速缓存。参数-a的意思是显示高速缓存中所有的内容。</p>
+<p>48 bit的以太网地址用6个十六进制的数来表示，中间以冒号隔开。</p>
+<h6 id="ARP分组格式"><a href="#ARP分组格式" class="headerlink" title="ARP分组格式"></a>ARP分组格式</h6><p><img src="/.com//arp02.png" alt></p>
+<p>（1）以太网报头中的前两个字段是以太网的源地址和目的地址。目的地址为全 1的特殊地址是 广播地址。电缆上</p>
+<p>的所有以太网接口都要接收广播的数据帧。 </p>
+<p>（2）两个字节长的以太网帧类型表示后面数据的类型。对于 A R P请求或应答来说，该字段的 值为0 x 0 8 0 6。</p>
+<p>（3）硬件类型字段表示硬件地址的类型。它的值为 1即表示以太网地址。协议类型字段表示要 映射的协议地址类</p>
+<p>​            型。它的值为 0 x 0 8 0 0即表示I P地址。它的值与包含 I P数据报的以太网数据 帧中的类型字段的值相同这</p>
+<p>​            是有意设计的</p>
+<p>（4）接下来的两个1字节的字段，硬件地址长度和协议地址长度分别指出硬件地址和协议地址 的长度，以字节为</p>
+<p>​            单位。对于以太网上 I P地址的A R P请求或应答来说，它们的值分别为 6和4</p>
+<p>（5）操作字段指出四种操作类型，它们是 A R P请求（值为1）、A R P应答（值为2）、R A R P请求 （值为3）和</p>
+<p>​            R A R P应答（值为4）（我们在第5章讨论R A R P）。这个字段必需的，因为 A R P请求 和A R P应答的帧</p>
+<p>​            类型字段值是相同的。</p>
+<p>（6）接下来的四个字段是发送端的硬件地址（在本例中是以太网地址）、发送端的协议地址 （I P地址）、目的端</p>
+<p>​            的硬件地址和目的端的协议地址。 （在以太网的数据帧报头中和ARP请求数据帧中都有发送端的硬件地            址）</p>
+<p>对于一个A R P请求来说，除目的端硬件地址外的所有其他的字段都有填充值。当系统收 到一份目的端为本机的 A </p>
+<p>R P请求报文后，它就把硬件地址填进去，然后用两个目的端地址分 别替换两个发送端地址，并把操作字段置为 </p>
+<p>2，最后把它发送回去。</p>
+<h6 id="ARP代理"><a href="#ARP代理" class="headerlink" title="ARP代理"></a>ARP代理</h6><p>如果A R P请求是从一个网络的主机发往另一个网络上的主机，那么连接这两个网络的路 由器就可以回答该请求，</p>
+<p>这个过程称作委托 A R P或A R P代理(Proxy ARP)。这样可以欺骗发起 A R P请求的发送端，使它误以为路由器就是</p>
+<p>目的主机，而事实上目的主机是在路由器的“另 一边”。路由器的功能相当于目的主机的代理，把分组从其他主机转</p>
+<p>发给它。 </p>
+<p>通过两个物理网络之间的路由器可以互相隐藏物理网络。</p>
+<h6 id="免费ARP"><a href="#免费ARP" class="headerlink" title="免费ARP"></a>免费ARP</h6><p> （1）一个主机可以通过它来确定另一个主机是否设置了相同的 I P地址。主机b s d i并不希望 对此请求有一个回</p>
+<p>答。但是，如果收到一个回答，那么就会在终端日志上产生一个错误消息 “以太网地址：a : b : c : d : e : f发送来重</p>
+<p>复的I P地址”。这样就可以警告系统管理员，某个系统有不 正确的设置。 </p>
+<p>（2） 如果发送免费A R P的主机正好改变了硬件地址（很可能是主机关机了，并换了一块接 口卡，然后重新启</p>
+<p>动），那么这个分组就可以使其他主机高速缓存中旧的硬件地址进行相应的 更新。一个比较著名的A R P协议事实</p>
+<p>[Plummer 1982]是，如果主机收到某个I P地址的A R P请求， 而且它已经在接收者的高速缓存中，那么就要用 A </p>
+<p>R P请求中的发送端硬件地址（如以太网地 址）对高速缓存中相应的内容进行更新。主机接收到任何 A R P请求都</p>
+<p>要完成这个操作（ A R P 请求是在网上广播的，因此每次发送 A R P请求时网络上的所有主机都要这样做）。 </p>
+<p>（3），通过发送含有备份硬件地址和 故障服务器的I P地址的免费A R P请求，使得备份文件服务器可以顺利地接</p>
+<p>替故障服务器进行 工作。这使得所有目的地为故障服务器的报文都被送到备份服务器那里，客户程序不用关心 原</p>
+<p>来的服务器是否出了故障。</p>
+<h3 id="ICMP：Internet控制报文协议"><a href="#ICMP：Internet控制报文协议" class="headerlink" title="ICMP：Internet控制报文协议"></a>ICMP：Internet控制报文协议</h3><h6 id="ICMP介绍"><a href="#ICMP介绍" class="headerlink" title="ICMP介绍"></a>ICMP介绍</h6><p>ICMP经常被认为是IP层的一个组成部分。它传递差错报文以及其他需要注意的信息。ICMP报文通常被IP层或更高</p>
+<p>层协议（TCP或UDP）使用。一些ICMP报文把差错报文返回给用户进程。</p>
+<p>ICMP报文是在IP数据报内部被传输的。</p>
+<p><img src="/.com//ICMP01.png" alt></p>
+<p>ICMP报文的格式，所有报文的前4个字节都是一样的，但是剩下的其他字节则互不相同。</p>
+<p><img src="/.com//ICMP02.png" alt></p>
+<p>类型字段可以有15个不同的值，以描述特定类型的ICMP报文，某些ICMP报文还使用代码字段的值    来进一步描</p>
+<p>述不同的条件。</p>
+<p>检验和字段覆盖整个ICMP报文，使用的算法和IP首部检验和算法相同。</p>
+<h6 id="ICMP报文类型"><a href="#ICMP报文类型" class="headerlink" title="ICMP报文类型"></a>ICMP报文类型</h6><img src="/.com//ICMP03.png" style="zoom:200%;">
+
+<p>不同类型由报文中的类型字段和代码字段共同决定。</p>
+<p>图中最后两列表明是一份查询报文还是一份差错报文。</p>
+<p>当发送一份ICMP差错报文时，报文始终包含IP的首部和产生ICMP差错报文的IP数据报的前8个字节。这样，接收 </p>
+<p>IC M P差错报文的模块就会把它与某个特定的协议（根据 I P数据报首部中的协议字段来判断）和用户进程（根据</p>
+<p>包含在 I P数据报前8个字节中的T C P或U D P报文首 部中的T C P或U D P端口号来判断）联系起来</p>
+<h6 id="ICMP差错报文"><a href="#ICMP差错报文" class="headerlink" title="ICMP差错报文"></a>ICMP差错报文</h6><p>下面各种情况都不会导致产生I C M P差错报文： </p>
+<p>（1）ICMP差错报文（但是，I C M P查询报文可能会产生I C M P差错报文）。 </p>
+<p>（2）目的地址是广播地址或多播地址（D类地址）的I P数据报。 </p>
+<p>（3）作为链路层广播的数据报。 </p>
+<p>（4） 不是I P分片的第一片（将在11 . 5节介绍分片）。</p>
+<p> （5） 源地址不是单个主机的数据报。这就是说，源地址不能为零地址、环回地址、广播地 址或多播地址。</p>
+<p> 这些规则是为了防止过去允许I C M P差错报文对广播分组响应所带来的广播风暴。</p>
+<p>差错报文结构</p>
+<p>UDP端口不可达</p>
+<p><img src="/.com//ICMP04.png" alt="ICMP04"></p>
+<p>ICMP不可达报文一般格式</p>
+<p><img src="/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CICMP05.png" alt="ICMP05"></p>
+<p>当I C M P报文返回时，为什么 T F T P客户程序还要继续重发请求呢？</p>
+<p>这是由于网络编程中 的一个因素，即B S D系统不把从插口( s o c k e t )接收到的I C M P报文中的U D P数据通知用户进程， 除非该进程已经发送了一个 c o n n e c t命令给该插口。标准的 BSD TFTP客户程序并不发送 c o n n e c t命令，因此它永远也不会收到I C M P差错报文的通知。 </p>
+<img src="/.com//hexo\source\_posts\TCP-IP\ICMP06.png" alt="ICMP06" style="zoom:200%;">
+
+<h3 id="Ping"><a href="#Ping" class="headerlink" title="Ping"></a>Ping</h3><h6 id="Ping介绍"><a href="#Ping介绍" class="headerlink" title="Ping介绍"></a>Ping介绍</h6><p>“p i n g”这个名字源于声纳定位操作。 P i n g程序由Mike Muuss编写，目的是为了测试另一 台主机是否可达。该</p>
+<p>程序发送一份 I C M P回显请求报文给主机，并等待返回 I C M P回显应答。</p>
+<p>可以用 P i n g程序来确定问题出在哪里。 P i n g程序还能测 出到这台主机的往返时间，以表明该主机离我们有“多远”。 </p>
+<p>一台主机的可达性可 能不只取决于I P层是否可达，还取决于使用何种协议以及端口号。P i n g程序的运行结果 可</p>
+<p>能显示某台主机不可达，但我们可以用Te l n e t远程登录到该台主机的2 5号端口（邮件 服务器） </p>
+<h6 id="Ping程序"><a href="#Ping程序" class="headerlink" title="Ping程序"></a>Ping程序</h6><p>ICMP回显请求和回显应答报文格式</p>
+<p>标识位是进程ID，序号是逐个增1，选项数据填充时间</p>
+<p><img src="/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CPing01.png" alt="Ping01"></p>
+<p>我们称发送回显请求的Ping程序为客户，而称被p i n g的主机为服务器。大多数的 T C P / I P 实现都在内核中直接</p>
+<p>支持 P i n g服务器—这种服务器不是一个用户进程（两 种I C M P查询服务，地址掩码和时间戳请求，也都是直接</p>
+<p>在内核中进行处理的）。 </p>
+<p>对于其他类型的I C M P查询报文，服务器必须响应标识符和序列号字段。另外，客户发送 的选项数据必须回显，假设客户对这些信息都会感兴趣。</p>
+<p>U n i x系统在实现p i n g程序时是把I C M P报文中的标识符字段置成发送进程的 I D号。这样 即使在同一台主机上同时运行了多个 p i n g程序实例，p i n g程序也可以识别出返回的信息。 </p>
+<h6 id="IP记录路由选项"><a href="#IP记录路由选项" class="headerlink" title="IP记录路由选项"></a>IP记录路由选项</h6><p>p i n g程序为我们提供了查看 I P记录路由（R R）选项的机会。大多数不同版本的 p i n g程序都提供-R选项，以提</p>
+<p>供记录路由的功能。它使得 p i n g程序在发送出去的I P数据报中设置I P R R选项（该I P数据报包含I C M P回显请</p>
+<p>求报文）。这样，每个处理该数据报的路由器都把它的 I P地址放入选项字段中。当数据报到达目的端时， I P地址</p>
+<p>清单应该复制到 I C M P回显应答中， 这样返回途中所经过的路由器地址也被加入清单中。当 p i n g程序收到回显</p>
+<p>应答时，它就打印 出这份I P地址清单。</p>
+<p>源端主机生成 R R选项，中间路由器对R R选项的 处理，以及把I C M P回显请求中的R R清单复制到I C M P回显应</p>
+<p>答中，所有这些都是选项功能。 幸运的是，现在的大多数系统都支持这些选项功能，只是有一些系统不把 I C M P</p>
+<p>请求中的I P清 单复制到I C M P应答中。 </p>
+<p>但是，最大的问题是 I P首部中只有有限的空间来存放 I P地址。I P 首部中的首部长度字段只有 4 bit，因此整个I P</p>
+<p>首部最长只能包括1 5个32 bit长的字（即6 0个字 节）。由于I P首部固定长度为2 0字节，R R选项用去3个字节</p>
+<p>（下面我们再讨论），这样只剩下 3 7个字节（ 6 0-2 0-3）来存放 I P地址清单，也就是说只能存放 9个I P地址。</p>
+<p> IP首部中的记录路由选项的一般格式</p>
+<p><img src="/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CPing02.png" alt="Ping02"></p>
+<p>c o d e是一个字节，指明I P选项的类型。对于R R选项来说，它的值为7。l e n是R R选项总字 节长度，在这种情况下为 3 9（尽管可以为R R选项设置比最大长度小的长度，但是 p i n g程序 总是提供3 9字节的选项字段，最多可以记录 9个I P地址。由于I P首部中留给选项的空间有限， 它一般情况都设置成最大长度）。 </p>
+<p>p t r称作指针字段。它是一个基于 1的指针，指向存放下一个I P地址的位置。它的最小值为 4，指向存放第一个I P地址的位置。随着每个 I P地址存入清单，p t r的值分别为8，1 2，1 6，最 大到3 6。当记录下9个I P地址后，p t r的值为4 0，表示清单已满。 </p>
+<p>当路由器（根据定义应该是多穴的）在清单中记录 I P地址时，它应该记录哪个地址呢？ 是入口地址还是出口地址？为此， RFC 791 [Postel 1981a]指定路由器记录出口I P地址。我们 在后面将看到，当原始主机（运行 p i n g程序的主机）收到带有 R R选项的I C M P回显应答时， 它也要把它的入口I P地址放入清单中。</p>
+<h6 id="IP时间戳"><a href="#IP时间戳" class="headerlink" title="IP时间戳"></a>IP时间戳</h6><p>IP首部中时间戳选项的一般格式</p>
+<p><img src="/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CPing03.png" alt="Ping03"></p>
+<p>时间戳选项的代码为 0 x 4 4。其他两个字段 l e n和p t r与记录路由选项相同：选项的总长度 （一般为3 6或4 0）和指向下一个可用空间的指针（ 5，9，1 3等）。 </p>
+<p>接下来的两个字段是4 bit的值：O F表示溢出字段，F L表示标志字段。时间戳选项的操作 根据标志字段来进行，</p>
+<p>时间戳的取值一般为自U T C午夜开始计的毫秒数，与 I C M P时间戳请求和应答相类似。如 果路由器不使用这种格式，它就可以插入任何它使用的时间表示格式，但是必须打开时间戳 中的高位以表明为非标准值。 </p>
+<p>与我们遇到的记录路由选项所受到的限制相比，时间戳选项遇到情况要更坏一些。如果 我们要同时记录I P地址和时间戳（标志位为 1），那么就可以同时存入其中的四对值。只记录 时间戳是没有用处的，因为我们没有标明时间戳与路由器之间的对应关系（除非有一个永远 不变的拓扑结构）。</p>
+<h3 id="Traceroute程序"><a href="#Traceroute程序" class="headerlink" title="Traceroute程序"></a>Traceroute程序</h3><h6 id="Traceroute和IP路径记录选项的比较"><a href="#Traceroute和IP路径记录选项的比较" class="headerlink" title="Traceroute和IP路径记录选项的比较"></a>Traceroute和IP路径记录选项的比较</h6><p>我们描述了 I P记录路由选项（R R）。为什么不使用这个选项而另外开发一个 新的应用程序？</p>
+<p>（1）并<strong>不是所有的路由器都支持记录路由选项</strong>， 因此该选项在某些路径上不能使用（ Tr a c e r o u t e程序不需</p>
+<p>要中间路由器具备任何特殊的或可选 的功能）。 </p>
+<p>（2）记录路由一般是单向的选项。发送端设置了该选项，那么接收端不得不从收到的 I P 首部中提取出所有的信息，然后全部返回给发送端。我们看到大多数P i n g服务器的 实现（内核中的I C M P回显应答功能）把接收到的R R清单返回，但是这样使得<strong>记录下来的 I P地 址翻了一番</strong>（一来一回）。这样做会受到一些限制，这一点我们在下一段讨论（ Tr a c e r o u t e程序 只需要目的端运行一个U D P模块—其他不需要任何特殊的服务器应用程序</p>
+<p>（3） <strong>I P首部中留给选项的空间有限</strong>，不能存放当前大多 数的路径。在I P首部选项字段中最多只能存放 9个I P地</p>
+<p>​       址。</p>
+<h6 id="Traceroute程序的操作"><a href="#Traceroute程序的操作" class="headerlink" title="Traceroute程序的操作"></a>Traceroute程序的操作</h6><p>Tr a c e r o u t e程序使用I C M P报文和I P首部中的T T L字段（生存周期）。T T L字段是由发送端 初始设置一个8 bit字段。推荐的初始值由分配数字 R F C指定，当前值为6 4。较老版本的系统 经常初始化为1 5或3 2。我们从第7章中的一些p i n g程序例子中可以看出，发送 I C M P回显应答 时经常把T T L设为最大值2 5 5。 </p>
+<p>每个处理数据报的路由器都需要把 T T L的值减1或减去数据报在路由器中停留的秒数。由 于大多数的路由器转发数据报的时延都小于 1秒钟，因此T T L最终成为一个跳站的计数器，所 经过的每个路由器都将其值减1。</p>
+<p>T T L字段的目的是防止数据报在选路时无休止地在网络中流动</p>
+<p>当路由器收到一份I P数据报，如果其T T L字段是0或1，则路由器不转发该数据报（接收到 这种数据报的目的主机可以将它交给应用程序，这是因为不需要转发该数据报。但是在通常 情况下，系统不应该接收 T T L字段为0的数据报）。相反，路由器将该数据报丢弃，并给信源 机发一份I C M P“超时”信息。Tr a c e r o u t e程序的关键在于包含这份 I C M P信息的I P报文的信源 地址是该路由器的I P地址。 </p>
+<p><strong>Tr a c e r o u t e程序的操作过程：</strong></p>
+<p>它发送一份T T L字段为1的I P数据报给 目的主机。处理这份数据报的第一个路由器将 T T L值减1，丢弃该数据报，并发回一份超时 I C M P报文。这样就得到了该路径中的第一个路由器的地址。然后 Tr a c e r o u t e程序发送一份 T T L值为2的数据报，这样我们就可以得到第二个路由器的地址。继续这个过程直至该数据报 到达目的主机。</p>
+<p>但是目的主机哪怕接收到 T T L值为1的I P数据报，也不会丢弃该数据报并产生 一份超时I C M P报文，这是因为数据报已经到达其最终目的地。那么我们该如何判断是否已经 到达目的主机了呢？ </p>
+<p>Tr a c e r o u t e程序发送一份U D P数据报给目的主机，但它选择一个不可能的值作为 U D P端口 号（大于30 000），使目的主机的任何一个应用程序都不可能使用该端口。因为，当该数据报 到达时，将使目的主机的 U D P模块产生一份“端口不可达”错误（见 6 . 5节）的I C M P报文。 这样，<strong>Tr a c e r o u t e程序所要做的就是区分接收到的 I C M P报文是超时还是端口不可达，以判断 什么时候结束。</strong></p>
+<p>（windows是Tracert发送ICMP请求，接收到ICMP应答时结束）</p>
+<h6 id="Traceroute的一些注意事项"><a href="#Traceroute的一些注意事项" class="headerlink" title="Traceroute的一些注意事项"></a>Traceroute的一些注意事项</h6><p>的源端口号（4 2 8 0 4）看起来有些大。 t r a c e r o u t e程序将其发送的U D P数据报 的源端口号设置为 U n i x进程号与 3 2 7 6 8之间的逻辑或值。对于在同一台主机上多次运行 t r a c e r o u t e程序的情况，每个进程都查看 I C M P返回的U D P首部的源端口号，并且只处理那 些对自己发送应答的报文。 </p>
+<p>（1）首先，并不能保证现在的路由也是 将来所要采用的路由，甚至两份连续的 I P数据报都可能采用不同的路由</p>
+<p>（2）不能保证I C M P报文的路由与t r a c e r o u t e程序发送的U D P数据报采用同一路由。 这表明所打印出来的往返时间可能并不能真正体现数据报发出和返回的时间差（如果 U D P数 据报从信源到路由器的时间是 1秒，而I C M P报文用另一条路由返回信源用了 3秒时间，则打印 出来的往返时间是4秒）</p>
+<p>（3）返回的I C M P报文中的信源I P地址是U D P数据报到达的路由器接口的 I P地址。这与 I P记录路由选项（7 . 3节）不同，记录的I P地址指的是发送接口地址。由于每个定义的路由器 都有2个或更多的接口，因此，从 A主机到B主机上运行t r a c e r o u t e程序和从B主机到A主机 上运行t r a c e r o u t e程序所得到的结果可能是不同的</p>
+<h6 id="IP源站选路选项"><a href="#IP源站选路选项" class="headerlink" title="IP源站选路选项"></a>IP源站选路选项</h6><p>源站路由的</p>
+<p><img src="/.com//E:%5Chexo%5Csource_posts%5CTCP-IP%5CTraceroute01.png" alt="Traceroute01"></p>
+<p>源站路由选项的实际称呼为“源站及记录路由”（对于宽松的源站选路和严格的源站选路， 分别用L S R R和S S R R表示），这是因为在数据报沿路由发送过程中，对I P地址清单进行了更新。 下面是其运行过程： </p>
+<p>发送主机从应用程序接收源站路由清单，将第 1个表项去掉（它是数据报的最终目的地 址），将剩余的项移到1个项中（如图8 - 6所示），并将原来的目的地址作为清单的最后一 项。指针仍然指向清单的第1项（即，指针的值为4）。 </p>
+<p>每个处理数据报的路由器检查其是否为数据报的最终地址。如果不是，则正常转发数 据报（在这种情况下，必须指明宽松源站选路，否则就不能接收到该数据报）。</p>
+<p>如果该路由器是最终目的，且指针不大于路径的长度，那么( 1)由p t r所指定的清单中的 下一个地址就是数据报的最终目的地址；( 2)由外出接口(outgoing interface)相对应的I P 地址取代刚才使用的源地址；(3)指针加4。 </p>
+<p>Host Requirements RFC指明，T C P客户必须能指明源站选路，同时，T C P服务器 必须能够接收源站选路，并且对于该 T C P连接的所有报文段都能采用反向路由。如果 T C P服务器下面接收到一个不同的源站选路，那么新的源站路由将取代旧的源站路 由。</p>
+<p><strong>严格的源路由选择</strong>：</p>
+<p>发送端指明 I P数据报所必须采用的确切路由。如果一个路由器发现 源路由所指定的下一个路由器不在其直接连接的网络上，那么它就返回一个“源站路 由失败”的I C M P差错报文。 </p>
+<p><strong>宽松的源站选路：</strong></p>
+<p>发送端指明了一个数据报经过的 I P地址清单，但是数据报在清单上指 明的任意两个地址之间可以通过其他路由器。 </p>
 
     </div>
 
@@ -464,7 +641,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP-IP"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.0.1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#通过路由器连接的两个网络"><span class="nav-number">1.0.1.0.0.1.</span> <span class="nav-text">通过路由器连接的两个网络</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#TCP-IP协议族中不同层次的协议"><span class="nav-number">1.0.1.0.0.2.</span> <span class="nav-text">TCP/IP协议族中不同层次的协议</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#封装——–分用"><span class="nav-number">1.0.1.0.0.3.</span> <span class="nav-text">封装——–分用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#端口号"><span class="nav-number">1.0.1.0.0.4.</span> <span class="nav-text">端口号</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链路层"><span class="nav-number">1.0.2.</span> <span class="nav-text">链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#封装格式（以太网和IEE-802封装）"><span class="nav-number">1.0.2.0.0.1.</span> <span class="nav-text">封装格式（以太网和IEE 802封装）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#环回接口"><span class="nav-number">1.0.2.0.0.2.</span> <span class="nav-text">环回接口</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MTU和路径MTU"><span class="nav-number">1.0.2.0.0.3.</span> <span class="nav-text">MTU和路径MTU</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP"><span class="nav-number">1.0.3.</span> <span class="nav-text">IP</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#IP介绍"><span class="nav-number">1.0.3.0.0.1.</span> <span class="nav-text">IP介绍</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP首部"><span class="nav-number">1.0.3.0.0.2.</span> <span class="nav-text">IP首部</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP首部选项"><span class="nav-number">1.0.3.0.0.3.</span> <span class="nav-text">IP首部选项</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP路由的选择"><span class="nav-number">1.0.3.0.0.4.</span> <span class="nav-text">IP路由的选择</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#特殊情况的IP地址"><span class="nav-number">1.0.3.0.0.5.</span> <span class="nav-text">特殊情况的IP地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP的未来"><span class="nav-number">1.0.3.0.0.6.</span> <span class="nav-text">IP的未来</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP-IP"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.0.1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#通过路由器连接的两个网络"><span class="nav-number">1.0.1.0.0.1.</span> <span class="nav-text">通过路由器连接的两个网络</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#TCP-IP协议族中不同层次的协议"><span class="nav-number">1.0.1.0.0.2.</span> <span class="nav-text">TCP/IP协议族中不同层次的协议</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#封装——–分用"><span class="nav-number">1.0.1.0.0.3.</span> <span class="nav-text">封装——–分用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#端口号"><span class="nav-number">1.0.1.0.0.4.</span> <span class="nav-text">端口号</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链路层"><span class="nav-number">1.0.2.</span> <span class="nav-text">链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#封装格式（以太网和IEE-802封装）"><span class="nav-number">1.0.2.0.0.1.</span> <span class="nav-text">封装格式（以太网和IEE 802封装）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#环回接口"><span class="nav-number">1.0.2.0.0.2.</span> <span class="nav-text">环回接口</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MTU和路径MTU"><span class="nav-number">1.0.2.0.0.3.</span> <span class="nav-text">MTU和路径MTU</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP"><span class="nav-number">1.0.3.</span> <span class="nav-text">IP</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#IP介绍"><span class="nav-number">1.0.3.0.0.1.</span> <span class="nav-text">IP介绍</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP首部"><span class="nav-number">1.0.3.0.0.2.</span> <span class="nav-text">IP首部</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP首部选项"><span class="nav-number">1.0.3.0.0.3.</span> <span class="nav-text">IP首部选项</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP路由的选择"><span class="nav-number">1.0.3.0.0.4.</span> <span class="nav-text">IP路由的选择</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#特殊情况的IP地址"><span class="nav-number">1.0.3.0.0.5.</span> <span class="nav-text">特殊情况的IP地址</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP的未来"><span class="nav-number">1.0.3.0.0.6.</span> <span class="nav-text">IP的未来</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP：地址解析协议"><span class="nav-number">1.0.4.</span> <span class="nav-text">ARP：地址解析协议</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#引言"><span class="nav-number">1.0.4.0.0.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#一个例子"><span class="nav-number">1.0.4.0.0.2.</span> <span class="nav-text">一个例子</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ARP高速缓存"><span class="nav-number">1.0.4.0.0.3.</span> <span class="nav-text">ARP高速缓存</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ARP分组格式"><span class="nav-number">1.0.4.0.0.4.</span> <span class="nav-text">ARP分组格式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ARP代理"><span class="nav-number">1.0.4.0.0.5.</span> <span class="nav-text">ARP代理</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#免费ARP"><span class="nav-number">1.0.4.0.0.6.</span> <span class="nav-text">免费ARP</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ICMP：Internet控制报文协议"><span class="nav-number">1.0.5.</span> <span class="nav-text">ICMP：Internet控制报文协议</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#ICMP介绍"><span class="nav-number">1.0.5.0.0.1.</span> <span class="nav-text">ICMP介绍</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ICMP报文类型"><span class="nav-number">1.0.5.0.0.2.</span> <span class="nav-text">ICMP报文类型</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ICMP差错报文"><span class="nav-number">1.0.5.0.0.3.</span> <span class="nav-text">ICMP差错报文</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ping"><span class="nav-number">1.0.6.</span> <span class="nav-text">Ping</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Ping介绍"><span class="nav-number">1.0.6.0.0.1.</span> <span class="nav-text">Ping介绍</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Ping程序"><span class="nav-number">1.0.6.0.0.2.</span> <span class="nav-text">Ping程序</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP记录路由选项"><span class="nav-number">1.0.6.0.0.3.</span> <span class="nav-text">IP记录路由选项</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP时间戳"><span class="nav-number">1.0.6.0.0.4.</span> <span class="nav-text">IP时间戳</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Traceroute程序"><span class="nav-number">1.0.7.</span> <span class="nav-text">Traceroute程序</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Traceroute和IP路径记录选项的比较"><span class="nav-number">1.0.7.0.0.1.</span> <span class="nav-text">Traceroute和IP路径记录选项的比较</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Traceroute程序的操作"><span class="nav-number">1.0.7.0.0.2.</span> <span class="nav-text">Traceroute程序的操作</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Traceroute的一些注意事项"><span class="nav-number">1.0.7.0.0.3.</span> <span class="nav-text">Traceroute的一些注意事项</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IP源站选路选项"><span class="nav-number">1.0.7.0.0.4.</span> <span class="nav-text">IP源站选路选项</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -480,7 +657,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
